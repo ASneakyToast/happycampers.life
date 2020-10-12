@@ -1,3 +1,7 @@
+---
+layout: default
+title: posts-list
+---
 <ul>
   {% for post in site.posts %}
     <li>
