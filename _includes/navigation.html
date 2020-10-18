@@ -2,7 +2,7 @@
   {% for item in site.data.navigation %}
     <a href='{{item.link}}'
       {% if page.url == item.link %}
-        style='color:red;'
+        class='current'
       {% endif %}>
       {{item.name}}
     </a>
