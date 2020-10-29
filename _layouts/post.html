@@ -1,20 +1,30 @@
 ---
 layout: default
 ---
-<h1 class="post-title">{{ page.title }}</h1>
-<h2 class="post-flavor">{{ page.flavor-text }}</h2>
+<link rel="stylesheet" href="/assets/css/post.css">
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <h2 class="post-flavor">{{ page.flavor-text }}</h2>
 
-<p class="post-author">
-  {{ page.date | date_to_string }}
-  {% assign author = site.authors | where: 'short_name', page.author | first %}
-  {% if author %}
-    - <a href="{{ author.url }}">{{ author.name }}</a>
-  {% endif %}
-</p>
+  <p class="post-author">
+   {{ page.date | date_to_string }}
+   {% assign author = site.authors | where: 'short_name', page.author | first %}
+   {% if author %}
+     - <a href="{{ author.url }}">{{ author.name }}</a>
+   {% endif %}
+  </p>
+
+</div>
 
 {% for media in site.static_files %}
-  {% if media.path contains "assets/media" %}
-    <img src="{{ site.url | append:media.path }}" class="post-image"></img>
-  {% endif %}
+{% assign short_url = page.date | date: "%Y-%m-%d" %}{% if media.name contains short_url %}
+<p>Testing should see</p>
+<style>
+.post {
+  background-image: url("{{ site.url | append:media.path }}");
+}
+</style>
+{% endif %}
 {% endfor %}
+
 {{ content }}
