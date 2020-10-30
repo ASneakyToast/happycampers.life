@@ -1,11 +1,16 @@
 .nav
   background-color: green
+  padding: 0 4px
 
   &-item
-    margin: 12px 0
-    color: white
-    &--active
-      color: orange
+    display: inline-block
+    margin: 4px 12px
+    list-style: none
 
-a
-  font-size: 8px
+    &-text
+      color: white
+      font-size: 16px
+      text-decoration: none
+      &--current
+        color: orange
+        text-decoration: none
