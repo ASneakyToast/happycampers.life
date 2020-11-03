@@ -2,6 +2,8 @@
 title: "Example post."
 flavor-text: "Make punny joke here!"
 ---
+This is the excerpt text and also shows here on the leading page.
+
 ### This is a subheading.
 And this is what the subheading is about. Its probably alot of stuff like yah dah dah, yeah ha ha, and also some more stuff.
 

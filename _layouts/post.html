@@ -2,29 +2,32 @@
 layout: default
 ---
 <link rel="stylesheet" href="/assets/css/post.css">
+<p class="post-image">Testing image</p>
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <h2 class="post-flavor">{{ page.flavor-text }}</h2>
+  <div class="post-meta">
+    <h2 class="post-flavor">{{ page.flavor-text }}</h2>
+    <h3 class="post-date_name">
+     {{ page.date | date_to_string }}
+     {% assign author = site.authors | where: 'short_name', page.author | first %}
+     {% if author %}
+       | <a href="{{ author.url }}">{{ author.name }}</a>
+     {% endif %}
+    </h3>
+  </div>
 
-  <p class="post-author">
-   {{ page.date | date_to_string }}
-   {% assign author = site.authors | where: 'short_name', page.author | first %}
-   {% if author %}
-     - <a href="{{ author.url }}">{{ author.name }}</a>
-   {% endif %}
-  </p>
-
+  <div class="post-content">
+    {{ content }}
+  </div>
 </div>
 
 {% for media in site.static_files %}
-{% assign short_url = page.date | date: "%Y-%m-%d" %}{% if media.name contains short_url %}
-<p>Testing should see</p>
-<style>
-.post {
-  background-image: url("{{ site.url | append:media.path }}");
-}
-</style>
-{% endif %}
+{% assign short_url = page.date | date: "%Y-%m-%d" %}
+  {% if media.name contains short_url %}
+    <style>
+      .post-image {
+        background-image: url("{{ site.url | append:media.path }}");
+      }
+    </style>
+  {% endif %}
 {% endfor %}
-
-{{ content }}
