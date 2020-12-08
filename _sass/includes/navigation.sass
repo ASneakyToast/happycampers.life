@@ -1,16 +1,18 @@
 .nav
   background-color: $secondary
-  padding: $space-xs
+  text-align: center
 
   &-item
     display: inline-block
-    margin: $space-xs $space-sm
     list-style: none
+    padding: $space-sm
+    color: $primary
 
     &-text
-      color: $primary
-      font-size: 16px
+      color: inherit
+      font-size: 18px
       text-decoration: none
-      &--current
-        color: $red
-        text-decoration: none
+
+    &--current
+      color: $white
+      background-color: $primary
