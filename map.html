@@ -1,0 +1,28 @@
+---
+layout: default
+title: map
+---
+<link rel="stylesheet" href="assets/css/map.css">
+
+
+<div>
+  <h1>all destinations</h1>
+  <div class="map">
+    <ul class="map__meta">
+      <li class="map__meta_item"><h3>2 states</h3></li>
+      <li class="map__meta_item"><h3>24 destinations</h3></li>
+    </ul>
+    <hr>
+    <img class="map__drawing" src="assets/media/US_map.svg" alt="map of the us"></img>
+  </div>
+
+  <ul class="destinations">
+    {% for state in site.destinations %}
+      <a class="destination-item" href="destinations/{{ state.title }}.html"><li>
+        <h4 class="destination-item__title">{{ state.title }}</h4>
+        <img class="destination-item__image" src="assets/media/destinations/{{ state.title }}.jpg"></img>
+        <p>see all {{ state.title }} posts</p>
+      </li></a>
+    {% endfor %}
+  </ul>
+</div>
