@@ -2,10 +2,8 @@
 layout: default
 title: Home
 ---
-<!--
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
--->
 
 <link rel="stylesheet" href="/assets/css/home.css">
 <div class="landing">
@@ -19,6 +17,7 @@ title: Home
     </p>
   </div>
 </div>
+
 <div class="about">
   <p class="about-flavor">
     "road trippin'<br>
@@ -32,4 +31,29 @@ title: Home
   <p class="about-link"><a href='about.html'>
     Read our full story
   </a></p>
+</div>
+
+<div id="eco" class="eco container">
+  <div>
+    <h2 class="eco__title">eco</h2>
+    <div class="icon-circle">
+      {% include icons/leaf.svg %}
+    </div>
+  </div>
+  <div class="eco__message">
+    <p>while living in our rv we say things about sustanibility and other words we like to relate to.</p>
+    <svg>
+      {% include icons/leaf.svg %}
+    </svg>
+  </div>
+  <div class="eco__slideshow slideshow">
+    <ul class="slideshow__items">
+      <li>{% include post-card.html post=site.posts.first %}</li</ul>
+    <form class="slideshow__leds">
+      <input type="radio" class="slideshow__item">
+    </form>
+  </div>
+  <a href="/eco.html" class="eco__link">
+    <button class="button-primary">eco-based posts</button>
+  </a>
 </div>

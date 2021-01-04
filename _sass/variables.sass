@@ -1,8 +1,18 @@
+@function tint($color, $percentage)
+  @return mix(white, $color, $percentage)
+
+@function shade($color, $percentage)
+  @return mix(black, $color, $percentage)
+
 $white: #F4F0EA
 $black: #111111
 $gray: #333333
 $primary: #648D64
+$primary--light: tint($primary, 30%)
+$primary--dark: shade($primary, 30%)
 $secondary: #EEE0CB
+$secondary--light: tint($secondary, 30%)
+$secondary--dark: shade($secondary, 30%)
 $red: #A4493E
 $orange: #C07444
 $yellow: #EDB857
@@ -41,6 +51,11 @@ h3
 h4
   font-size: 24px
   color: $secondary
+
+h6, button
+  font-size: 18px
+  color: $gray
+  font-family: "Open Sans"
 
 p, li
   font-family: "Open Sans"
