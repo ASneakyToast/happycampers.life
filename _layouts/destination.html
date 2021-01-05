@@ -1,14 +1,12 @@
 ---
 layout: default
 ---
-<h1>{{ page.name }}</h1>
+<link rel="stylesheet" href="/assets/css/destination.css">
 
-{{ content }}
-
-<h2>Posts</h2>
-<ul>
-  {% assign filtered_posts = site.posts | where: 'destination', page.destination %}
-  {% for post in filtered_posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+<div class="meta">
+  <h2>{{ page.title }}</h2>
+  <h3>{{ page.destination }}</h2>
+</div>
+<div>
+  {{ content }}
+</div>

@@ -17,8 +17,9 @@ title: map
   </div>
 
   <ul class="destinations">
+    <!-- TODO: change this so it's actually filtering by unique destination:values and not all posts -->
     {% for state in site.destinations %}
-      <a class="destination-item" href="destinations/{{ state.title }}.html"><li>
+      <a class="destination-item" href="{{ state.url }}"><li>
         <h4 class="destination-item__title">{{ state.title }}</h4>
         <img class="destination-item__image" src="assets/media/destinations/{{ state.title }}.jpg"></img>
         <p>see all {{ state.title }} posts</p>

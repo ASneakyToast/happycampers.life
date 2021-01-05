@@ -3,6 +3,8 @@ collections:
     output: true
   destinations:
     output: true
+  memories:
+    output: true
 
 defaults:
   - scope:

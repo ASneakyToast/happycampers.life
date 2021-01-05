@@ -7,9 +7,11 @@
     {% seo %}
   </head>
   <body>
-    <div class="content">
+    <div class="wrapper">
       {% include header.html %}
-      {{ content }}
+      <div class="content">
+        {{ content }}
+      </div>
       {% include footer.html %}
     </div>
   </body>
