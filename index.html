@@ -46,12 +46,8 @@ title: Home
       {% include icons/leaf.svg %}
     </svg>
   </div>
-  <div class="eco__slideshow slideshow">
-    <ul class="slideshow__items">
-      <li>{% include post-card.html post=site.posts.first %}</li</ul>
-    <form class="slideshow__leds">
-      <input type="radio" class="slideshow__item">
-    </form>
+  <div class="eco__posts">
+    <div>{% include post-card.html post=site.posts.first %}</div>
   </div>
   <a href="/eco.html" class="eco__link">
     <button class="button-primary">eco-based posts</button>
