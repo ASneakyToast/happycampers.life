@@ -1,0 +1,25 @@
+.post-card
+  text-decoration: none
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5)
+  border-radius: $radius
+  border-bottom: 4px solid $secondary
+
+  &__img_area
+    position: relative
+  &__img_area > img
+    background-color: green
+    border-radius: $radius $radius 0 0
+  &__title
+    padding: 6px 12px
+    box-sizing: border-box
+    position: absolute
+    top: 70%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    background: rgba(255,255,255,0.6)
+    
+  &__meta
+    background: $white
+    & > p
+      color: $primary

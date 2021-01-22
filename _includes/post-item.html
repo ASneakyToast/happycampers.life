@@ -1,0 +1,15 @@
+<a href="{{ include.post.url }}" class="post-item container--card">
+  <div class="post-item__media">
+    {% if include.post.cover %}
+      <img src="{% asset_path cover.png {{ include.post.id }} %}" class="post-card__img">
+    {% else %}
+      <svg>
+        {% include icons/leaf.svg %}
+      </svg>
+    {% endif %}
+  </div>
+  <div class="post-item__meta container container--well">
+    <h4>{{ include.post.title }}</h4>
+    {{ include.post.excerpt }}
+  </div>
+</a>

@@ -1,0 +1,10 @@
+---
+layout: default
+title: journals
+---
+testing!
+{% for journal in site.journals %}
+  <a href="{{ journal.url }}">
+    <p>{{ journal.title }}</p>
+  </a>
+{% endfor %}

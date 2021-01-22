@@ -1,0 +1,20 @@
+.post-item
+  display: grid
+  grid-template-columns: 80px auto
+  text-decoration: none
+
+  &__media
+    display: flex
+    flex: 1
+    background-color: $primary--dark
+    border-radius: $radius 0 0 $radius
+    & > svg
+      padding: $space-sm
+      box-sizing: border-box
+      fill: $primary--light
+    & > img
+      border-radius: $radius 0 0 $radius
+
+  &__meta
+    flex: 3
+    border-radius: 0 $radius $radius 0

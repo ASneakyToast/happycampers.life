@@ -1,6 +1,7 @@
 ---
 title: "Example post."
 flavor-text: "Make punny joke here!"
+cover: true
 ---
 This is the excerpt text and also shows here on the leading page.
 

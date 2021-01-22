@@ -5,6 +5,11 @@ collections:
     output: true
   memories:
     output: true
+  journals:
+    output: true
+    permalink: /journal/:title/
+
+permalink: pretty
 
 defaults:
   - scope:
@@ -17,6 +22,11 @@ defaults:
       type: "authors"
     values:
       layout: "author"
+  - scope:
+      path: ""
+      type: "journals"
+    values:
+      layout: "post"
   - scope:
       path: ""
       type: "posts"

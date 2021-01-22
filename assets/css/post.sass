@@ -1,10 +1,15 @@
 ---
 ---
+@import "fonts"
 @import "variables"
+@import "themes"
+@import "mixins/buttons"
+@import "mixins/icons"
+@import "mixins/container"
+@import "blocks/image-row"
 
 .post
   background-color: $primary
-  padding: $space-md $space-xl
 
   &-image
     width: 100%
@@ -23,8 +28,6 @@
   &-flavor
     color: $white
     
-  &-content
-    & h3
-      text-align: left
-      color: $secondary
-      padding: $space-md 0 $space-sm
+  &__content
+    & img
+      box-shadow: $shadow-2dp

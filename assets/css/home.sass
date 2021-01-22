@@ -2,8 +2,11 @@
 ---
 @import "fonts"
 @import "variables"
+@import "themes"
 @import "mixins/buttons"
 @import "mixins/icons"
+@import "includes/post-card"
+@import "includes/post-item"
 
 .content
   margin: 0
@@ -34,12 +37,12 @@
       opacity: 70%
 
 .about
-  padding: $space-xl $space-xl
   background-color: $primary
   text-align: center
 
-  &-flavor
+  &__flavor
     padding: $space-md
+    margin: 0 $space-xl
     background-color: $secondary
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5)
     font-size: 24px
@@ -67,6 +70,7 @@
     min-height: 240px
     flex-direction: vertical
     align-items: center
+    justify-content: center
     & > p
       padding: 0 16px
       z-index: 1
@@ -77,20 +81,3 @@
 .slideshow
   &__items
   &__leds
-
-.post-card
-  display: flex
-  flex: 1fr 1fr
-  &__title
-  &__meta
-  &__img
-    &:before
-      content: ' '
-      display: block
-      position: absolute
-      width: 50px
-      height: 50px
-      background-color: $primary--dark
-      background-image: url('/assets/icons/leaf-solid.svg')
-      background-repeat: no-repeat
-  &__excerpt

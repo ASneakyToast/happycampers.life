@@ -18,19 +18,31 @@ title: Home
   </div>
 </div>
 
-<div class="about">
-  <p class="about-flavor">
+<div class="about container">
+  <p class="about__flavor">
     "road trippin'<br>
     in our 1980<br>
     self-renovated<br>
     tiny home trailer"
   </p>
-  <p class="about-description">
+  <p class="about__description">
     Just two 21 year old enviromentally conscious kids road trippin' around the US, in our 1980 self-renovated tiny home trailer! For one full year we will be seeing as many beautiful sites as we can in this sublime part of the world.
   </p>
-  <p class="about-link"><a href='about.html'>
-    Read our full story
-  </a></p>
+  <a href="/journal/how_our_dreams_turned_into_our_reality/">
+    <p class="about__link button-secondary">
+      Read our full story
+    </p>
+  </a>
+</div>
+
+<div id="featured" class="featured container theme-secondary">
+  <h2>Featured Posts</h2>
+  {% for post in site.posts limit:3 %}
+    {% include post-card.html post=post %}
+  {% endfor %}
+  <a href="/blog">
+    <button class="button-primary">see all posts</button>
+  </a>
 </div>
 
 <div id="eco" class="eco container">
@@ -47,7 +59,7 @@ title: Home
     </svg>
   </div>
   <div class="eco__posts">
-    <div>{% include post-card.html post=site.posts.first %}</div>
+    <div>{% include post-item.html post=site.posts.first %}</div>
   </div>
   <a href="/eco.html" class="eco__link">
     <button class="button-primary">eco-based posts</button>
