@@ -1,3 +1,14 @@
-<div id="footer" class="container">
-  <p>Happy campers</p>
-</div>
+<footer id="footer" class="">
+  <section class="social container">
+    {% for social in site.data.social %}
+      <a href="{{ social.url }}" class="social__item">
+        <svg class="icon">{% include icons/{{ social.platform }}.svg %}</svg>
+        <h4>{{ social.username }}</h4>
+      </a>
+    {% endfor %}
+  </section>
+
+  <section class="logo">
+    <h2>Happy campers</h2>
+  </section>
+</footer>
