@@ -1,6 +1,6 @@
 {% assign post = include.post %}
 
-<a href="post.url" class="post-card">
+<a href="{{ post.url }}" class="post-card">
   {% if post.pin %}
     <div class="post-card__img_area">
       <img src="{% asset_path pin.png {{ post.id }} %}">
