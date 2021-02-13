@@ -1,0 +1,22 @@
+.section-well
+  min-height: 30vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  vertical-align: middle
+  border-top: 1px solid $primary--dark
+  border-bottom: 1px solid $primary--dark
+
+.container-inline
+  display: flex
+  place-content: center
+  gap: $space-sm
+
+.section-3up
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 12px
+  & > :first-child
+    grid-column: auto / span 2
+    & h4
+      font-size: 125%

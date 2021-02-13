@@ -1,0 +1,21 @@
+{% assign post = include.post %}
+
+<a href="{{ post.url }}">
+<article class="container-small post-recipie">
+  <section class="image-circle post-recipie__img">
+    {% if post.cover %}
+      <img class="" src="{% asset_path cover.png {{ post.id }} %}">
+    {% else %}
+      <img class="" src="/assets/images/placeholder.png">
+    {% endif %}
+  </section>
+  
+  <h4>{{ post.title }}</h4>
+
+  <section class="container-inline">
+    {% for diet in post.diets %}
+      <svg class="icon">{% include icons/{{ diet }}.svg %}</svg>
+    {% endfor %}
+  </section>
+</article>
+</a>

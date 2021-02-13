@@ -8,6 +8,9 @@ collections:
   journals:
     output: true
     permalink: /journal/:title/
+  recipies:
+    output: true
+    permalink: /recipie/:title/
 
 permalink: pretty
 

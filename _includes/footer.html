@@ -2,8 +2,10 @@
   <section class="social container">
     {% for social in site.data.social %}
       <a href="{{ social.url }}" class="social__item">
-        <svg class="icon">{% include icons/{{ social.platform }}.svg %}</svg>
-        <h4>{{ social.username }}</h4>
+        <article class="container-inline">
+          <svg class="icon">{% include icons/{{ social.platform }}.svg %}</svg>
+          <h4>{{ social.username }}</h4>
+        </article>
       </a>
     {% endfor %}
   </section>
