@@ -48,7 +48,8 @@ title: Home
 <div id="featured" class="container theme--secondary">
   <h2>Featured Posts</h2>
 
-  {% for post in site.posts limit:3 %}
+  {% assign posts-featured = site.posts | where: "featured", "true" %}
+  {% for post in posts-featured limit:3 %}
     {% include post-card.html post=post %}
   {% endfor %}
 
