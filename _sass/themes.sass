@@ -1,7 +1,57 @@
-.theme-secondary
-  background-color: $secondary
+$primary: #648D64
+$primary--light: tint($primary, 30%)
+$primary--dark: shade($primary, 30%)
+$secondary: #EEE0CB
+$secondary--light: tint($secondary, 30%)
+$secondary--dark: shade($secondary, 30%)
+
+div.theme--primary
+  background-color: $primary
+  color: $secondary--light
+  & > section.well
+    border-top: 1px solid $primary--light
+    border-bottom: 1px solid $primary--light
+  & > section.quote
+    background-color: $secondary
+    color: $primary--dark
+
+  & > button.primary
+    background-color: $secondary
+    border: $secondary--dark
+    color: $primary--dark
+  & > button.secondary
+    color: $secondary--light
   
-  & button
+  & article.card
+    background-color: $secondary--light
+    color: $primary--dark
+    border-bottom: 4px solid $secondary
+
+div.theme--secondary
+  background-color: $secondary 
+  color: $primary--dark
+  & h2
+    color: $primary--dark
+
+  & > section.well
+    border-top: 1px solid $primary--light
+    border-bottom: 1px solid $primary--light
+  & > section.quote
+    background-color: $primary
+    color: $secondary--light
+
+  & > button.primary
     background-color: $primary
     border: $primary--dark
-    color: $white
+    color: $secondary--light
+  & > button.secondary
+    color: $primary--dark
+
+  & article.card
+    background-color: $secondary--light
+    color: $primary--dark
+    border-bottom: 4px solid $secondary
+
+  & div.icon-circle
+    background-color: $primary
+    color: $secondary--light

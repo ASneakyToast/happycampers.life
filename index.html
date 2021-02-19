@@ -2,10 +2,14 @@
 layout: default
 title: Home
 ---
+<!--
 <script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>eruda.init();</script>
+-->
 
 <link rel="stylesheet" href="/assets/css/home.css">
+
+
 <div class="landing">
   <div class="landing-text">
     <p class="landing-text-flavor">
@@ -18,72 +22,90 @@ title: Home
   </div>
 </div>
 
-<div class="about container">
-  <p class="about__flavor">
-    "road trippin'<br>
-    in our 1980<br>
-    self-renovated<br>
-    tiny home trailer"
-  </p>
-  <p class="about__description">
+
+<div id="about" class="container theme--primary">
+  <section class="quote">
+    <h2>
+      "road trippin'<br>
+      in our 1980<br>
+      self-renovated<br>
+      tiny home trailer"
+    </h2>
+  </section>
+
+  <p>
     Just two 21 year old enviromentally conscious kids road trippin' around the US, in our 1980 self-renovated tiny home trailer! For one full year we will be seeing as many beautiful sites as we can in this sublime part of the world.
   </p>
-  <a href="/journal/how_our_dreams_turned_into_our_reality/">
-    <p class="about__link button-secondary">
+ 
+  <button class="secondary">
+    <a href="/journal/how_our_dreams_turned_into_our_reality/">
       Read our full story
-    </p>
-  </a>
+    </a>
+  </button>
 </div>
 
-<div id="featured" class="featured container theme-secondary">
+
+<div id="featured" class="container theme--secondary">
   <h2>Featured Posts</h2>
+
   {% for post in site.posts limit:3 %}
     {% include post-card.html post=post %}
   {% endfor %}
-  <a href="/blog">
-    <button class="button-primary">see all posts</button>
-  </a>
+
+  <button class="primary">
+    <a href="/blog">see all posts</a>
+  </button>
 </div>
 
-<div id="eco" class="eco container">
-  <section class="container-inline">
-    <h2 class="eco__title">eco</h2>
+
+<div id="eco" class="container theme--primary">
+  <section class="row">
+    <h2>eco</h2>
     <div class="icon-circle">
       {% include icons/leaf.svg %}
     </div>
   </section>
-  <div class="eco__message">
+
+  <section class="well overlay">
     <p>while living in our rv we say things about sustanibility and other words we like to relate to.</p>
     <svg>
       {% include icons/leaf.svg %}
     </svg>
-  </div>
-  <div class="eco__posts">
-    <div>{% include post-item.html post=site.posts.first %}</div>
-  </div>
-  <a href="/eco.html" class="eco__link">
-    <button class="button-primary">eco-based posts</button>
-  </a>
+  </section>
+
+  {% include post-item.html post=site.posts.first %}
+  
+  <button class="primary eco__link">
+    <a href="/eco.html">
+      eco-based posts
+    </a>
+  </button>
 </div>
 
-<div id="recipies" class="recipies container">
-  <section class="container-inline">
+
+<div id="recipies" class="recipies container theme--secondary">
+  <section class="row">
     <h2>recipies</h2>
     <div class="icon-circle">
       {% include icons/leaf.svg %}
     </div>
   </section>
-  <p class="section-well">
-    there's going to eb alot of text here becasue its actually an intro and not a catch line. easy, cheap and healthy food.
-  </p>
+
+  <section class="well">
+    <p>
+      there's going to eb alot of text here becasue its actually an intro and not a catch line. easy, cheap and healthy food.
+    </p>
+  </section>
+
   <section class="section-3up">
     {% for recipie in site.recipies limit:3 %}
       {% include post-recipie.html post=recipie %}
     {% endfor %}
   </section>
-  <a href="/recipies/">
-    <button class="button-primary">
+  
+  <button class="primary">
+    <a href="/recipies/">
       see all recipies
-    </button>
-  </a>
+    </a>
+  </button>
 </div>

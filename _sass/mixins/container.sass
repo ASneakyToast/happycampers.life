@@ -3,13 +3,16 @@
   grid-gap: $space-lg
   padding: $space-lg
   
-  &--card
-    box-shadow: $shadow-2dp
-    border-radius: $radius
-
   &--well
     grid-gap: $space-md
     padding: $space-md
+
+  & section.well
+    min-height: 25vh
+
+article.card
+  box-shadow: $shadow-2dp
+  border-radius: $radius
 
 .container-small
   display: grid

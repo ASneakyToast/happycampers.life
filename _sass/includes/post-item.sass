@@ -1,6 +1,6 @@
 .post-item
   display: grid
-  grid-template-columns: 80px auto
+  grid-template-columns: 2fr 3fr
   text-decoration: none
 
   &__media
@@ -9,6 +9,7 @@
     background-color: $primary--dark
     border-radius: $radius 0 0 $radius
     & > svg
+      color: $primary--light
       padding: $space-sm
       box-sizing: border-box
       fill: $primary--light
@@ -16,5 +17,6 @@
       border-radius: $radius 0 0 $radius
 
   &__meta
+    color: inherit
     flex: 3
     border-radius: 0 $radius $radius 0

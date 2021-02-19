@@ -1,23 +1,29 @@
 {% assign post = include.post %}
 
-<a href="{{ post.url }}" class="post-card">
-  {% if post.pin %}
-    <div class="post-card__img_area">
-      <img src="{% asset_path pin.png {{ post.id }} %}">
-    </div>
-  {% elsif include.post.cover %}
-    <div class="post-card__img_area">
-      <img src="{% asset_path cover.png {{ include.post.id }} %}">
-      <h4 class="post-card__title">{{ include.post.title }}</h4>
-    </div>
-  {% else %}
-    <!-- Broken image, because card's should have them -->
-    <div class="post-card__img_area">
-      <img src="/assets/images/placeholder.png">
-      <h4 class="post-card__title">{{ include.post.title }}</h4>
-    </div>
-  {% endif %}
-  <div class="post-card__meta container container--well">
-    {{ include.post.excerpt }}
-  </div>
+<a href="{{ post.url }}">
+  <article class="card post-card">
+    {% if post.pin %}
+      <section class="post-card__img_area">
+        <img src="{% asset_path pin.png {{ post.id }} %}">
+      </section>
+    {% elsif include.post.cover %}
+      <section class="post-card__img_area">
+        <img src="{% asset_path cover.png {{ include.post.id }} %}">
+        <div class="post-card__title">
+          <h4>{{ include.post.title }}</h4>
+        </div>
+      </section>
+    {% else %}
+      <!-- Broken image, because card's should have them -->
+      <section class="post-card__img_area">
+        <img src="/assets/images/placeholder.png">
+        <div class="post-card__title">
+          <h4>{{ include.post.title }}</h4>
+        </div>
+      </section>
+    {% endif %}
+    <section class="well">
+      {{ include.post.excerpt }}
+    </section>
+  </article>
 </a>
