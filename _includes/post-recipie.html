@@ -14,7 +14,7 @@
 
     <section class="row">
       {% for diet in post.diets %}
-        <svg class="icon">{% include icons/{{ diet }}.svg %}</svg>
+        <svg class="icon">{% include icons/{{ diet | downcase}}.svg %}</svg>
       {% endfor %}
     </section>
   </article>
