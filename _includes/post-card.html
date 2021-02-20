@@ -4,11 +4,11 @@
   <article class="card post-card">
     {% if post.pin %}
       <section class="post-card__img_area">
-        <img src="{% asset_path pin.png {{ post.id }} %}">
+        <img src="{% asset_path pin.jpg {{ post.id }} %}">
       </section>
     {% elsif include.post.cover %}
       <section class="post-card__img_area">
-        <img src="{% asset_path cover.png {{ include.post.id }} %}">
+        <img src="{% asset_path cover.jpg {{ include.post.id }} %}">
         <div class="post-card__title">
           <h4>{{ include.post.title }}</h4>
         </div>
@@ -16,14 +16,17 @@
     {% else %}
       <!-- Broken image, because card's should have them -->
       <section class="post-card__img_area">
-        <img src="/assets/images/placeholder.png">
+        <img src="/assets/images/placeholder.jpg">
         <div class="post-card__title">
           <h4>{{ include.post.title }}</h4>
         </div>
       </section>
     {% endif %}
-    <section class="well">
-      {{ include.post.excerpt }}
-    </section>
+
+    {% if post.description != "none" %}
+      <section class="well">
+        <p>{{ include.post.description }}</p>
+      </section>
+    {% endif %}
   </article>
 </a>

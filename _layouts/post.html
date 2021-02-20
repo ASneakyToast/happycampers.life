@@ -3,20 +3,30 @@ layout: default
 ---
 <link rel="stylesheet" href="/assets/css/post.css">
 
-<div class="post container">
-  <h1 class="post__title">{{ page.title }}</h1>
-  <div class="post__meta">
-    <h2 class="pos__flavor">{{ page.flavor-text }}</h2>
-    <h3 class="post__date_name">
-     {{ page.date | date_to_string }}
-     {% assign author = site.authors | where: 'short_name', page.author | first %}
-     {% if author %}
-       | <a href="{{ author.url }}">{{ author.name }}</a>
-     {% endif %}
-    </h3>
-  </div>
+{% if page.pin %}
+  <img src="{% asset_path pin.jpg {{ page.id }} %}"></img>
+{% endif %}
+<div class="post container theme--primary">
+  <h1>{{ page.title }}</h1>
 
-  <div class="post__content container container--well">
+  <section class="well">
+    {% if page.flavor-text != "none" %}
+      <h2>{{ page.flavor-text }}</h2>
+    {% endif %}
+    <h3>
+      {{ page.date | date_to_string }}
+    </h3>
+    {% assign author = site.authors | where: 'short_name', page.author | first %}
+    {% if author %}
+      <h3>
+        <a href="{{ author.url }}">
+          {{ author.name }}
+        </a>
+      </h3>
+    {% endif %}
+  </section>
+
+  <div class="post__content container">
     {{ content }}
   </div>
 </div>

@@ -2,7 +2,7 @@
   <article class="card post-item">
     <div class="post-item__media">
       {% if include.post.cover %}
-        <img src="{% asset_path cover.png {{ include.post.id }} %}" class="post-card__img">
+        <img src="{% asset_path cover.jpg {{ include.post.id }} %}" class="post-card__img">
       {% else %}
         <svg>
           {% include icons/leaf.svg %}
