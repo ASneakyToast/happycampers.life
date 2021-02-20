@@ -22,8 +22,11 @@
         </div>
       </section>
     {% endif %}
-    <section class="well">
-      <p>{{ include.post.description }}</p>
-    </section>
+
+    {% if post.description != "none" %}
+      <section class="well">
+        <p>{{ include.post.description }}</p>
+      </section>
+    {% endif %}
   </article>
 </a>
