@@ -40,6 +40,9 @@ defaults:
     values:
       layout: "default"
 
+destination:
+  ../dist
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
