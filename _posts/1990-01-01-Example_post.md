@@ -3,6 +3,7 @@ title: Example post
 date: 0001-01-01
 description: none
 flavor-text: none
+category: eco, 
 pin: false
 cover: true
 featured: false

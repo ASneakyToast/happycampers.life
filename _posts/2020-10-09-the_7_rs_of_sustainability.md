@@ -3,6 +3,7 @@ title: the 7 r's of sustainability
 date: 2020-10-09
 description: none
 flavor-text: how to live sustainabily
+category: eco
 pin: true
 cover: false
 featured: true

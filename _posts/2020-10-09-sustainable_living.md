@@ -3,6 +3,7 @@ title: sustainable living
 date: 2020-10-09
 description: What is sustainable living and why we choose it for our life.
 flavor-text: none
+category: eco
 pin: true
 cover: true
 featured: true

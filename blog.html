@@ -3,11 +3,12 @@ layout: default
 title: Blog
 ---
 <div class="container theme--primary">
-  <h2>Latest Posts</h2>
+  <h2>all posts</h2>
 
-  {% for post in site.posts limit:3 %}
-    {% include post-item.html post=post %}
-  {% endfor %}
-
+  <section class="playmat">
+    {% for post in site.posts %}
+      {% include post-pin.html post=post %}
+    {% endfor %}
+  </section>
 
 </div>

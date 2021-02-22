@@ -2,12 +2,18 @@
 layout: default
 title: eco
 ---
-<div class="container theme--primary">
-  <h2>latest eco posts</h2>
+{% assign posts-eco = site.posts | where: "category", "eco" %}
 
-  {% assign posts-eco = site.posts | where: "category", "eco" %}
-  {% for post in posts-eco limit:3 %}
-    {% include post-item.html post=post %}
-  {% endfor %}
+<div class="container theme--primary">
+  <h2>eco posts</h2>
+  <section class="well">
+    <p>while living in our rv we say things about sustanibility and other words we like to relate to.</p>
+  </section>
+
+  <section class="playmat">
+    {% for post in posts-eco %}
+      {% include post-pin.html post=post %}
+    {% endfor %}
+  </section>
 
 </div>
