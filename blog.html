@@ -2,19 +2,12 @@
 layout: default
 title: Blog
 ---
-<h1>Latest Posts</h1>
+<div class="container theme--primary">
+  <h2>Latest Posts</h2>
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p>
-      {% assign short_date = post.date | date: '%Y-%m-%d' %}
-      {% for media in site.static_files %}
-        {% if media.name contains short_date %}
-          <img src="{{ site.url | append:media.path }}"></img>
-        {% endif %}
-      {% endfor %}
-    </li>
+  {% for post in site.posts limit:3 %}
+    {% include post-item.html post=post %}
   {% endfor %}
-</ul>
+
+
+</div>
