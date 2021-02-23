@@ -1,0 +1,32 @@
+#wrapper
+  display: grid
+  height: 100%
+  grid-template-rows: auto 1fr auto
+
+  & > header
+    grid-area: head
+
+  & > main
+    grid-area: main
+
+  & > nav.drawer
+    grid-area: nav-drawer
+
+  & > footer
+    grid-area: footer
+
+@media screen and (max-width: 760px)
+  #wrapper
+    width: 100%
+    margin: 0
+    padding: 0
+    grid-template-areas: "head" "main" "footer"
+
+  .content
+    text-align: center
+
+@media screen and (max-width: 1200px) and (orientation: landscape)
+  .content
+    width: 460px
+    margin: 0 auto
+    padding: 0

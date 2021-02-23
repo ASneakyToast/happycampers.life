@@ -15,13 +15,22 @@
       gtag('config', 'G-WYX9805ST9');
     </script>
   </head>
+
   <body>
-    <div class="wrapper">
+    <div id="wrapper">
+      {% include menu.html %}
+
       {% include header.html %}
-      <div class="content">
+
+      <main class="content">
         {{ content }}
-      </div>
+      </main>
+
       {% include footer.html %}
     </div>
   </body>
+  
+  <footer>
+    <script src="/assets/js/menu.js"></script>
+  </footer>
 </html>
