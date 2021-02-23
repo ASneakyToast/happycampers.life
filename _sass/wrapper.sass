@@ -1,7 +1,10 @@
 #wrapper
   display: grid
-  height: 100%
   grid-template-rows: auto 1fr auto
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
 
   & > header
     grid-area: head
@@ -15,15 +18,59 @@
   & > footer
     grid-area: footer
 
-@media screen and (max-width: 760px)
+@media screen and (max-width: $screen-mobile)
   #wrapper
-    width: 100%
     margin: 0
     padding: 0
     grid-template-areas: "head" "main" "footer"
 
   .content
     text-align: center
+
+  .container
+    grid-gap: $space-lg
+    padding: $space-lg
+
+  h1
+    font-size: 32px
+  h2
+    font-size: 24px
+  h3
+    font-size: 18px
+  h4
+    font-size: 24px
+  h5
+    font-size: 20px
+  h6, p, button
+    font-size: 18px
+  li 
+    font-size: 16px
+
+@media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet)
+  #wrapper
+    grid-template-areas: "head" "main" "footer"
+    
+  .content
+    text-align: center
+
+  .container
+    grid-gap: $space-lg*2
+    padding: $space-lg*2 $space-lg*4
+
+  h1
+    font-size: 50px
+  h2
+    font-size: 42px
+  h3
+    font-size: 38px
+  h4
+    font-size: 32px
+  h5
+    font-size: 28px
+  h6, p, button
+    font-size: 24px
+  li,
+    font-size: 20px
 
 @media screen and (max-width: 1200px) and (orientation: landscape)
   .content
