@@ -46,7 +46,18 @@
   section.wide
     margin: 0px -$space-lg*4
 
-@media screen and (min-width: $screen-tablet)
+@media screen and (min-width: $screen-tablet) and (max-width: $screen-laptop)
+  #wrapper
+    grid-template-areas: "head" "main" "footer"
+    
+  .content
+    text-align: center
+
+  .container
+    grid-gap: $space-lg
+    padding: $space-lg*2 $space-lg*4
+
+@media screen and (min-width: $screen-laptop) and (max-width: $screen-desktop)
   #wrapper
     grid-template-areas: "head" "main" "footer"
     
