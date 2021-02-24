@@ -1,14 +1,27 @@
 @media screen and (max-width: $screen-mobile)
   section.playmat
     grid-template-columns: 1fr
+  section.up
+    & > :first-child
+      grid-column: auto / span 2
+      & h4
+        font-size: 125%
 
 @media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet)
   section.playmat
     grid-template-columns: 1fr
+  section.up
+    grid-template-columns: 1fr 1fr
+    & > :first-child
+      grid-column: auto / span 2
+      & h4
+        font-size: 125%
 
 @media screen and (min-width: $screen-tablet) and (max-width: $screen-laptop)
   section.playmat
     grid-template-columns: 1fr 1fr
+  section.up
+    grid-template-columns: 1fr 1fr 1fr
 
 .section-well
   min-height: 30vh
@@ -69,11 +82,6 @@ section.row
   place-content: center
   gap: $space-sm
 
-.section-3up
+section.up
   display: grid
-  grid-template-columns: 1fr 1fr
   grid-gap: 12px
-  & > :first-child
-    grid-column: auto / span 2
-    & h4
-      font-size: 125%
