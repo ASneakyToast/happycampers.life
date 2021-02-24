@@ -1,16 +1,16 @@
-<footer id="footer" class="">
-  <section class="social container">
-    {% for social in site.data.social %}
-      <a href="{{ social.url }}" class="social__item">
-        <article class="container-inline">
-          <svg class="icon">{% include icons/{{ social.platform }}.svg %}</svg>
-          <h4>{{ social.username }}</h4>
-        </article>
-      </a>
-    {% endfor %}
-  </section>
-
-  <section class="logo">
-    <h2>Happy campers</h2>
-  </section>
+<footer id="footer">
+  <div class="container theme--primary">
+    <section class="well">
+      {% for social in site.data.social %}
+        <a href="{{ social.url }}" class="social__item">
+          <article class="container-inline">
+            <svg class="icon">{% include icons/{{ social.platform }}.svg %}</svg>
+            <h4>{{ social.username }}</h4>
+          </article>
+        </a>
+      {% endfor %}
+    </section>
+  </div>
 </footer>
+      
+<h2 class="logo">happy campers</h2>
