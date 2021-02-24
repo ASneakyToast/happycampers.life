@@ -48,10 +48,12 @@ title: Home
 <div id="featured" class="container theme--secondary">
   <h2>Featured Posts</h2>
 
-  {% assign posts-featured = site.posts | where: "featured", "true" %}
-  {% for post in posts-featured limit:3 %}
-    {% include post-card.html post=post %}
-  {% endfor %}
+  <section class="playmat">
+    {% assign posts-featured = site.posts | where: "featured", "true" %}
+    {% for post in posts-featured limit:3 %}
+      {% include post-card.html post=post %}
+    {% endfor %}
+  </section>
 
   <button class="primary wide big">
     <a href="/blog">see all posts</a>

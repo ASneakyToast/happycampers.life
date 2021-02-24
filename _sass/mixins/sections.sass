@@ -1,3 +1,15 @@
+@media screen and (max-width: $screen-mobile)
+  section.playmat
+    grid-template-columns: 1fr
+
+@media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet)
+  section.playmat
+    grid-template-columns: 1fr 1fr
+
+@media screen and (min-width: $screen-tablet) and (max-width: $screen-laptop)
+  section.playmat
+    grid-template-columns: 1fr 1fr
+
 .section-well
   min-height: 30vh
   display: flex
@@ -7,7 +19,6 @@
 
 section.playmat
   display: grid
-  grid-template-columns: 1fr 1fr
   grid-gap: $space-sm
 
 section.well

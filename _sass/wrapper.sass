@@ -1,7 +1,6 @@
 #wrapper
   display: grid
   grid-template-rows: auto 1fr auto
-  width: 100%
   height: 100%
   margin: 0
   padding: 0
@@ -30,6 +29,9 @@
   .container
     grid-gap: $space-lg
     padding: $space-lg
+  
+  section.wide
+    margin: 0 -$space-lg 
 
   h1
     font-size: 32px
@@ -56,6 +58,8 @@
   .container
     grid-gap: $space-lg*2
     padding: $space-lg*2 $space-lg*4
+  section.wide
+    margin: 0px -$space-lg*4
 
   h1
     font-size: 50px
@@ -72,8 +76,28 @@
   li,
     font-size: 20px
 
-@media screen and (max-width: 1200px) and (orientation: landscape)
+@media screen and (min-width: $screen-tablet)
+  #wrapper
+    grid-template-areas: "head" "main" "footer"
+    
   .content
-    width: 460px
-    margin: 0 auto
-    padding: 0
+    text-align: center
+
+  .container
+    grid-gap: $space-lg
+    padding: $space-lg*2 $space-lg*4
+
+  h1
+    font-size: 32px
+  h2
+    font-size: 24px
+  h3
+    font-size: 18px
+  h4
+    font-size: 24px
+  h5
+    font-size: 20px
+  h6, p, button
+    font-size: 18px
+  li 
+    font-size: 16px
