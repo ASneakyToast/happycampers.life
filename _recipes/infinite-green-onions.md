@@ -1,6 +1,6 @@
 ---
 title: Infinite Green Onions
-diets: [Vegan, Non-Dairy]
+diets: [v, vg]
 ---
 Is this a recipie or a post. Def a post.
 

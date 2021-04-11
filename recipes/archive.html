@@ -1,0 +1,17 @@
+---
+layout: default
+title: recipes archive
+permalink: /recipes/
+---
+
+<div class="container theme--primary">
+  <h1>recipies</h1>
+  
+  <hr></hr>
+
+  <section class="playmat">
+    {% for recipe in site.recipes %}
+      {% include post-recipe.html post=recipe %}
+    {% endfor %}
+  </section>
+</div>

@@ -26,12 +26,10 @@
   .content
     text-align: center
 
-  .container
-    grid-gap: $space-lg
-    padding: $space-lg
-  
   section.wide
     margin: 0 -$space-lg 
+  section.row
+    gap: $space-sm
 
 @media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet)
   #wrapper
@@ -40,11 +38,10 @@
   .content
     text-align: center
 
-  .container
-    grid-gap: $space-lg*2
-    padding: $space-lg*2 $space-lg*4
   section.wide
     margin: 0px -$space-lg*4
+  section.row
+    gap: $space-sm
 
 @media screen and (min-width: $screen-tablet) and (max-width: $screen-laptop)
   #wrapper
@@ -53,9 +50,8 @@
   .content
     text-align: center
 
-  .container
-    grid-gap: $space-lg
-    padding: $space-lg*2 $space-lg*4
+  section.row
+    gap: $space-md
 
 @media screen and (min-width: $screen-laptop) and (max-width: $screen-desktop)
   #wrapper
@@ -64,7 +60,6 @@
   .content
     text-align: center
 
-  .container
-    grid-gap: $space-lg
-    padding: $space-lg*2 $space-lg*4
+  section.row
+    gap: $space-md
 

@@ -1,0 +1,112 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="/assets/css/recipe.css">
+
+
+<div class="container theme--primary">
+  <h1>{{ page.long-title }}</h1>
+  
+  <section class="well">
+    <section id="diets" class="row">
+      {% for diet in page.diets %}
+        <svg class="icon">{% include icons/{{ diet | downcase}}.svg %}</svg>
+      {% endfor %}
+    </section>
+
+    {% comment %}
+    <section id="ratings"  class="row">
+      <p>{{ page.rating }}</p>
+      <form action="mailto:joelnotlithgow@gmail.com"
+            method="POST"
+            enctype="multipart/form-data"
+            name="recipe-rating">
+        <input type="radio" name="recipe_review_{{ page.title }}" value="1"></input>
+        <input type="radio" name="recipe_review_{{ page.title }}" value="2"></input>
+        <input type="radio" name="recipe_review_{{ page.title }}" value="3"></input>
+        <input type="radio" name="recipe_review_{{ page.title }}" value="4"></input>
+        <input type="radio" name="recipe_review_{{ page.title }}" value="5"></input>
+        <button class="secondary">
+          <input type="submit" value="Submit"></input>
+        </button>
+        <a href="#comments">
+          <svg class="icon">
+            {% include icons/leaf.svg %}
+          </svg>
+          <p>comments</p>
+        </a>
+      </form>
+    </section>
+    {% endcomment %}
+
+    <button class="secondary">
+      <a href="#recipe">jump to recipe</a>
+    </button>
+  </section>
+
+  <p>{{ page.description }}</p>
+
+  <img class="full" src="{% asset_path cover.jpg {{ page.id }} %}">
+
+  <hr></hr>
+
+  {{ content | downcase }}
+
+  <div id="recipe" class="container-inner">
+    <section class="meal">
+      <main>
+        <h4>{{ page.title }}</h4>
+        <p>total time: {{ page.minutes }} minutes</p>
+        <p>serving size: {{ page.serving-size }}</p>
+      </main>
+      <aside>
+        <img class="square" src="{% asset_path cover.jpg {{ page.id }} %}">
+      </aside>
+    </section>
+
+    <hr></hr>
+
+    <p>{{ page.description }}</p>
+
+    <hr></hr>
+
+    <section id="ingredients">
+      <h4>ingredients</h4>
+      <ul>
+        {% for item in page.ingredients %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    
+    <section>
+      <h4>instructions</h4>
+      <ol>
+        {% for step in page.instructions %}
+          <li>{{ step }}</li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <hr></hr>
+
+    <section id="how-to-store">
+      <h4>how to store</h4>
+      <p>{{ page.how-to-store }}</p>
+    </section>
+
+    <hr></hr>
+
+    <section id="notes">
+      <h4>notes</h4>
+      <p>{{ page.notes }}</p>
+    </section>
+  </div>
+
+  <section id="social" class="quote">
+    <h4>did you make this recipe?</h4>
+    <p>tag <b>@happycampers.us</b> and hashtag it with <b>#happycampersfood</b> so we can see how your delicious dish turned out!</p>
+  </section>
+
+  <img class="full" src="{% asset_path pin.jpg {{ page.id }} %}"></img>
+</div>

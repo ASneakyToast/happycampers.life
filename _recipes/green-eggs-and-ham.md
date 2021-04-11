@@ -1,6 +1,6 @@
 ---
 title: Green eggs and ham
-diets: [Vegan, Non-Dairy]
+diets: [v, df]
 ---
 Green eggs and ham is a real meal I tell you Sam!
 

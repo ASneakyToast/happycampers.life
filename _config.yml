@@ -8,9 +8,9 @@ collections:
   journals:
     output: true
     permalink: /journal/:title/
-  recipies:
+  recipes:
     output: true
-    permalink: /recipie/:title/
+    permalink: /recipe/:title/
 
 permalink: pretty
 
@@ -35,6 +35,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: ""
+      type: "recipes"
+    values:
+      layout: "recipe"
   - scope:
       path: ""
     values:

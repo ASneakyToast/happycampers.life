@@ -4,6 +4,7 @@ $primary--dark: shade($primary, 30%)
 $secondary: #EEE0CB
 $secondary--light: tint($secondary, 30%)
 $secondary--dark: shade($secondary, 30%)
+$accent: #EDB857
 
 body
   background-color: lightblue
@@ -13,12 +14,18 @@ body
 div.theme--primary
   background-color: $primary
   color: $secondary--light
-  & blockquote
+  & hr
+    border-top: 1px solid $secondary
+  & section.quote, blockquote
     background-color: $secondary
     color: $primary--dark
   & > section.well
     border-top: 1px solid $primary--light
     border-bottom: 1px solid $primary--light
+  & .container-inner
+    border: 1px solid $accent
+    & > hr
+      border-top: 1px solid $accent
 
   & button.primary
     background-color: $secondary

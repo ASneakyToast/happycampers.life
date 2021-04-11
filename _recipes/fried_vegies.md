@@ -1,5 +1,5 @@
 ---
 title: Fried Veggies
-diets: [Vegan]
+diets: [v]
 ---
 Veggies, chopped and fried.

@@ -86,9 +86,9 @@ title: Home
 </div>
 
 
-<div id="recipies" class="recipies container theme--secondary">
+<div id="recipes" class="recipes container theme--secondary">
   <section class="row">
-    <h2>recipies</h2>
+    <h2>recipes</h2>
     <div class="icon-circle">
       {% include icons/leaf.svg %}
     </div>
@@ -101,14 +101,14 @@ title: Home
   </section>
 
   <section class="up">
-    {% for recipie in site.recipies limit:3 %}
-      {% include post-recipie.html post=recipie %}
+    {% for recipe in site.recipes limit:3 %}
+      {% include post-recipe.html post=recipe %}
     {% endfor %}
   </section>
   
   <button class="primary wide big">
-    <a href="/recipies/">
-      see all recipies
+    <a href="/recipes/">
+      see all recipes
     </a>
   </button>
 </div>

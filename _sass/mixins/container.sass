@@ -1,9 +1,47 @@
 .container
   display: grid
+  & > header
+    justify-self: left
   
   &--well
     grid-gap: $space-md
     padding: $space-md
+
+.container-inner
+  display: grid
+  text-align: left
+
+@media screen and (max-width: $screen-mobile)
+  .container
+    grid-gap: $space-lg
+    padding: $space-lg
+  .container-inner
+    grid-gap: $space-md
+    padding: $space-md
+  
+@media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet)
+  .container
+    grid-gap: $space-lg*2
+    padding: $space-lg*2 $space-lg*4
+  .container-inner
+    grid-gap: $space-md*2
+    padding: $space-md*2 $space-md*4
+
+@media screen and (min-width: $screen-tablet) and (max-width: $screen-laptop)
+  .container
+    grid-gap: $space-lg
+    padding: $space-lg*2 $space-lg*4
+  .container-inner
+    grid-gap: $space-md
+    padding: $space-md*2 $space-md*4
+
+@media screen and (min-width: $screen-laptop) and (max-width: $screen-desktop)
+  .container
+    grid-gap: $space-lg
+    padding: $space-lg*2 $space-lg*4
+  .container-inner
+    grid-gap: $space-md
+    padding: $space-md*2 $space-md*4
 
 article.card
   box-shadow: $shadow-2dp
