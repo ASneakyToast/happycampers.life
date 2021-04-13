@@ -108,5 +108,11 @@ layout: default
     <p>tag <b>@happycampers.us</b> and hashtag it with <b>#happycampersfood</b> so we can see how your delicious dish turned out!</p>
   </section>
 
-  <img class="full" src="{% asset_path pin.jpg {{ page.id }} %}"></img>
+  <section id="pin" class="topleft">
+    <figure>
+        {% assign pin = asset_path pin.jpg page.id %}
+      {% include pin.html url="page.url | prepend: site.url" image="pin" description="page.description" %}
+    </figure>
+    <img class="full" src="{% asset_path pin.jpg {{ page.id }} %}"></img>
+  </section>
 </div>
