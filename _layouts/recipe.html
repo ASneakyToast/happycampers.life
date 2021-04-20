@@ -53,7 +53,7 @@ layout: default
   {{ content | downcase }}
 
   <div id="recipe" class="container-inner">
-    <section class="meal">
+    <section class="plate">
       <main>
         <h4>{{ page.title }}</h4>
         <p>total time: {{ page.minutes }} minutes</p>
@@ -109,10 +109,24 @@ layout: default
   </section>
 
   <section id="pin" class="topleft">
-    <figure>
-        {% assign pin = asset_path pin.jpg page.id %}
-      {% include pin.html url="page.url | prepend: site.url" image="pin" description="page.description" %}
-    </figure>
     <img class="full" src="{% asset_path pin.jpg {{ page.id }} %}"></img>
   </section>
+
+  {% comment %}
+  <section class="small">
+    <a data-pin-do="buttonPin" data-pin-tall="true" href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww-cs-students.stanford.edu%2F~amitp%2FArticles%2FHexLOS.html&media=https%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=WordWordWord"></a>
+  </section>
+
+  <section class="small">
+      {% capture pin %} {% asset_path pin.jpg {{ page.id }} %} {% endcapture %}
+      {% assign url = page.url | prepend: site.url | cgi_escape %}
+      {% assign description = page.description | cgi_escape %}
+    <p>url {{ url }}</p>
+    <p>pin {{ pin | cgi_escape }}</p>
+    <p>dewc {{ description }}</p>
+    <a data-pin-do="buttonPin" data-pin-tall="true" href="https://www.pinterest.com/pin/create/button/?url={{ url }}&media={{ pin | prepend:'site.url' | cgi_escape }}&description={{ description }}"></a>
+    <p>https://www.pinterest.com/pin/create/button/?url={{ url }}&media={{ pin | prepend:site.url | cgi_escape }}&description={{ description }}</p>
+    <p>https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww-cs-students.stanford.edu%2F~amitp%2FArticles%2FHexLOS.html&media=https%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=WordWordWord"</p>
+  </section>
+  {% endcomment %}
 </div>
