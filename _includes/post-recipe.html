@@ -1,7 +1,7 @@
 {% assign post = include.post %}
 
 <a href="{{ post.url }}">
-  <article class="card container-small post-recipie">
+  <article id="{{ post.id }}" class="card container-small post-recipie">
     <section class="post-recipie__img">
       <img class="" src="{% asset_path cover.jpg {{ post.id }} %}">
     </section>
