@@ -3,6 +3,8 @@ collections:
     output: true
   destinations:
     output: true
+  states:
+    output: true
   memories:
     output: true
   journals:

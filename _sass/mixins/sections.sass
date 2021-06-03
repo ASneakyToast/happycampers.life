@@ -1,6 +1,7 @@
 @media screen and (max-width: $screen-mobile)
   section.playmat
     grid-template-columns: 1fr
+    grid-gap: $space-md
   section.up
     & > :first-child
       grid-column: auto / span 2
@@ -10,6 +11,7 @@
 @media screen and (min-width: $screen-mobile) and (max-width: $screen-tablet)
   section.playmat
     grid-template-columns: 1fr 1fr
+    grid-gap: $space-md
   section.up
     grid-template-columns: 1fr 1fr
     & > :first-child
@@ -20,18 +22,19 @@
 @media screen and (min-width: $screen-tablet+1) and (max-width: $screen-laptop)
   section.playmat
     grid-template-columns: 1fr 1fr 1fr
+    grid-gap: $space-md
   section.up
     grid-template-columns: 1fr 1fr 1fr
 
 @media screen and (min-width: $screen-laptop)
   section.playmat
     grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-gap: $space-md
   section.up
     grid-template-columns: 1fr 1fr 1fr 1fr
 
 section.playmat
   display: grid
-  grid-gap: $space-sm
 
 section.well
   display: flex
@@ -103,9 +106,16 @@ section.plate
   display: grid
   grid-template-columns: 2fr 1fr
 
+section.basic
+  display: grid
+  gap: $space-sm
+  
 section.small
   height: 33vh
-  
+
+section.left
+  text-align: left
+
 .container-inline
   display: flex
   place-content: center
