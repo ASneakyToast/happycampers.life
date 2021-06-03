@@ -24,6 +24,11 @@ defaults:
       layout: "destination"
   - scope:
       path: ""
+      type: "states"
+    values:
+      layout: "state"
+  - scope:
+      path: ""
       type: "authors"
     values:
       layout: "author"
