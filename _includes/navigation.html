@@ -3,17 +3,16 @@
     {% for item in site.data.navigation %}
     
       {% if item.dropdown %}
-        <section class="dropdown">
+        <section class="dropdown" >
           <section class="row">
             <p><a href="{{ item.url }}">
               {{ item.title }}
             </a></p>
-            <section onClick="dropdown(this.parentNode.parentNode)">
+            <section onClick="handleDropdown(event, this.parentNode.parentNode)" onmouseenter="handleDropdown(event, this.parentNode.parentNode)">
               <svg class="icon">{% include icons/dropdown.svg %}</svg>
             </section>
           </section>
           <nav class="dropdown-nav hidden">
-            <section class="offclick" onClick="dropdown(this.parentNode.parentNode)"></section>
             <main>
               <section class="well">
                 {% for dropdown in item.dropdown %}
