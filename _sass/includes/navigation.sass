@@ -1,10 +1,6 @@
 nav 
-  & >.offclick
-    background-color: rgba(0,0,0,0.5)
   & >.container
     box-shadow: $shadow-2dp
-  & p
-    font-size: 24px
 
 nav#drawer
   z-index: 24
@@ -16,6 +12,10 @@ nav#drawer
   box-shadow: 0 -1px -2px 0 rgba(0,0,0,0.5)
   &.hidden
     display: none
+  & > main
+    display: flex
+    box-shadow: $shadow-24dp
+    z-index: 24
 
 .nav
   background-color: $secondary

@@ -1,14 +1,36 @@
-<nav class="nav">
-  <ul>
-  {% for item in site.data.navigation %}
-    <li {% if page.url == item.link %}
-        class="nav-item nav-item--current"
+<div id="nav-header" class="theme--secondary">
+  <section class="row">
+    {% for item in site.data.navigation %}
+    
+      {% if item.dropdown %}
+        <section class="dropdown">
+          <section class="row">
+            <p><a href="{{ item.url }}">
+              {{ item.title }}
+            </a></p>
+            <section onClick="dropdown(this.parentNode.parentNode)">
+              <svg class="icon">{% include icons/ns.svg %}</svg>
+            </section>
+          </section>
+          <nav class="dropdown-nav hidden">
+            <section class="offclick" onClick="dropdown(this.parentNode.parentNode)"></section>
+            <main>
+              <section class="well">
+                {% for dropdown in item.dropdown %}
+                  <p><a href="{{ dropdown.url }}">
+                    {{ dropdown.title }}
+                  </a></p>
+                {% endfor %}
+              </section>
+            </main>
+          </nav>
+        </section>
       {% else %}
-        class="nav-item"
-      {% endif %}>
-      <a href="{{item.link}}" class="nav-item-text">
-        {{item.name}}
-      </a>
-    </li>
-  {% endfor %}
-</nav>
+        <p><a href="{{ item.url }}">
+          {{ item.title }}
+        </a></p>
+      {% endif %}
+
+    {% endfor %}
+  </section>
+</div>

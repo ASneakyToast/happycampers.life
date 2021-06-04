@@ -1,0 +1,28 @@
+{% if item.dropdown %}
+
+  <section class="dropdown row">
+    <article><a href="{{ item.link }}">
+      <p>{{ item.name }}</p>
+    </a></article>
+
+    <main class="dropdown-container hidden">
+      {% for dropdown in item.dropdown %}
+        <article><a href="{{ dropdown.link }}">
+          <p>{{ dropdown.name }}</p>
+        </a></article>
+      {% endfor %}
+    </main>
+
+    <aside onClick="dropdown(this.parentNode)">
+      <svg class="icon">{% include icons/ns.svg %}</svg>
+    </aside>
+
+  </section>
+
+{% else %}
+
+  <article><a href="{{ item.link }}">
+    <p>{{ item.name }}</p>
+  </a></article> 
+
+{% endif %}

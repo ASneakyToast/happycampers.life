@@ -29,6 +29,11 @@
   section.up
     grid-template-columns: 1fr 1fr 1fr 1fr
 
+section.basic
+  display: grid
+  grid-gap: $space-sm
+  padding: 0 $space-sm
+
 section.playmat
   display: grid
   grid-gap: $space-sm
@@ -78,10 +83,24 @@ section.overlay
     position: absolute
     height: 100%
 
+section.offclick
+  position: fixed
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 22
+
+section.--shade
+  background-color: none
+    background-color: rgba(0,0,0,0.5)
+
 section.row
+  padding: $space-sm 0
   display: flex
   flex-wrap: wrap
   place-content: center
+  align-items: center
 
 section.up
   display: grid
@@ -105,7 +124,7 @@ section.plate
 
 section.small
   height: 33vh
-  
+
 .container-inline
   display: flex
   place-content: center
