@@ -24,11 +24,11 @@ title: map
 
   <section class="playmat">
   {% for state in site.states %}
-    <section class="basic">
+    <section class="">
 
       <article class="card"><a href="{{ state.url }}">
         <h4>{{ state.title }}</h4>
-        <img class="" src="/assets/media/destinations/{{ state.title }}.jpg"></img>
+          <img class="cover" src="{% asset_path cover.jpg {{ state.id }} %}"></img>
         </a>
       </article>
 

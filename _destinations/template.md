@@ -1,8 +1,9 @@
 ---
 title: 'name here'
-layout: destination
-destination: state-name
-rating: 3
+state: state-name
+
+featured: false
+published: false
 ---
 
 a rest stop about 30min north of fallon, nevada.

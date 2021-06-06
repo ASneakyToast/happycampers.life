@@ -1,18 +1,35 @@
 ---
 layout: default
 ---
+<section class="large">
+  <img class="full" src="{% asset_path cover.jpg {{ page.id }} %}"></img>
+</section>
+
 <div class="container theme--primary">
   <h1>{{ page.title }}</h1>
 
   {{ content }}
 
   <section>
-    <h2>Posts</h2>
+    <h2>posts</h2>
     <ul>
       {% assign state_posts = site.destinations | where: 'state', page.title %}
       {% for post in state_posts %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
+  </section>
+
+  <section id="memories">
+    <h2>memories</h2>
+
+    <section class="playmat">
+      {% assign state_memories = site.memories | where: 'state', page.title %}
+      {% for memory in state_memories %}
+        <article>
+          <img class="full" src="/assets/memories/{{ memory.filename }}"></img>
+        </article>
+      {% endfor %}
+    </section>
   </section>
 </div>
