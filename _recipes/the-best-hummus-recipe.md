@@ -5,7 +5,7 @@ rating: 5
 description: easy to make, extra smooth and creamy hummus that tastes fresh and packed with flavor.
 
 title: humus recipe
-time: 15 minutes
+total-time: 15 minutes
 serving-size: x cups
 freezer-friendly: true
 how-to-store: description of how to store

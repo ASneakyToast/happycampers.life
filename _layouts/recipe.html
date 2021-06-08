@@ -46,7 +46,9 @@ layout: default
 
   <p>{{ page.description }}</p>
 
-  <img class="full" src="{% asset_path cover.jpg {{ page.id }} %}">
+  <section>
+    <img src="{% asset_path cover.jpg {{ page.id }} %}">
+  </section>
 
   <hr></hr>
 
@@ -56,8 +58,10 @@ layout: default
     <section class="plate">
       <main>
         <h4>{{ page.title }}</h4>
-        <p>total time: {{ page.minutes }} minutes</p>
-        <p>serving size: {{ page.serving-size }}</p>
+        <p>total time: {{ page.total-time }}</p>
+        {% if page.serving-size != 'none' %}
+          <p>serving size: {{ page.serving-size }}</p>
+        {% endif %}
       </main>
       <aside>
         <img class="square" src="{% asset_path cover.jpg {{ page.id }} %}">
@@ -108,9 +112,17 @@ layout: default
     <p>tag <b>@happycampers.us</b> and hashtag it with <b>#happycampersfood</b> so we can see how your delicious dish turned out!</p>
   </section>
 
-  <section id="pin" class="topleft">
-    <img class="full" src="{% asset_path pin.jpg {{ page.id }} %}"></img>
-  </section>
+  {% if page.pin-amount != 1 %}
+    <section class="row">
+      {% for index in (1..page.pin-amount) %}
+        <img src="{% asset_path pin-{{ index }}.jpg {{ page.id }} %}"></img>
+      {% endfor %}
+    </section>
+  {% else %} 
+    <section id="pin" class="row topleft">
+      <img src="{% asset_path pin.jpg {{ page.id }} %}"></img>
+    </section>
+  {% endif %}
 
   {% comment %}
   <section class="small">
