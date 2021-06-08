@@ -5,7 +5,7 @@ rating: 3.7
 description: none
 
 title: your title here
-time: 1.5 hours
+total-time: 1.5 hours
 serving-size: x cups
 freezer-friendly: true
 how-to-store: description of how to store
@@ -17,6 +17,8 @@ instructions:
   - step two
 notes: any extra notes here
 
+pin-amount: 1
+featured: false
 published: false
 ---
 
