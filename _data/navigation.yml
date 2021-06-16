@@ -22,7 +22,11 @@
   dropdown:
     - title: breakfast
       url: /recipes/breakfast/
-    - title: lunch
-      url: /recipes/lunch/
-    - title: dinner
-      url: /recipes/dinner/
+#    - title: lunch
+#      url: /recipes/lunch/
+#    - title: dinner
+#      url: /recipes/dinner/
+    - title: snacks
+      url: /recipes/snacks/
+#    - title: desserts
+#      url: /recipes/desserts/

@@ -5,6 +5,7 @@ rating: 5
 description: easy to make, extra smooth and creamy hummus that tastes fresh and packed with flavor.
 
 title: humus recipe
+meal: breakfast
 total-time: 15 minutes
 serving-size: x cups
 freezer-friendly: true
@@ -33,6 +34,7 @@ instructions:
   - place in a bowl and drizzle olive oil on top with a pinch of paprika
 notes: jmake sure you do the rain dance before all of this.
 
+featured: false
 published: true
 ---
 

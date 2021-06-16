@@ -1,17 +1,36 @@
 ---
 layout: default
-title: recipes archive
+title: recipes
 permalink: /recipes/
 ---
 
 <div class="container theme--primary">
   <h1>recipies</h1>
-  
-  <hr></hr>
+  <p>breakfast description. something abbout breakfast bbeing the most important part of the day and our main things to eat are our delicious <a href="{% link _recipes/healthy-and-crunchy-granola.md %}">granola.</a></p>
 
-  <section class="playmat">
-    {% for recipe in site.recipes %}
-      {% include post-recipe.html post=recipe %}
-    {% endfor %}
+  <section class="row">
+    <button class="primary"><a href="/recipes/breakfast">
+      breakfast
+    </a></button>
+    <!-- Currently no related blogs
+      <button class="primary"><a href="/recipes/lunch">
+        lunch
+      </a></button>
+      <button class="primary"><a href="/recipes/dinner">
+        dinner
+      </a></button>
+    -->
+    <button class="primary"><a href="/recipes/snacks">
+      snacks
+    </a></button>
+    <!-- Currently no related blogs
+      <button class="primary"><a href="/recipes/dessert">
+        dessert
+      </a></button>
+    -->
   </section>
 </div>
+
+{% assign recipes = site.recipes %}
+{% include generic-list.html
+    items=recipes called="recipes" template="post-recipe" %}

@@ -1,0 +1,21 @@
+---
+title: snack recipes
+
+layout: default
+permalink: /recipes/snacks/
+---
+
+<div class="container theme--primary">
+  <h1>snack recipes</h1>
+  <p>some description about snacks and hopefully some other stuff as well, like a photo or featured recipe!</p>
+
+  <section>
+    <button class="primary"><a href="/recipes">
+      back to all recipes
+    </a></button>
+  </section>
+</div>
+
+{% assign snack_recipes = site.recipes | where: "meal", "snacks" %}
+{% include generic-list.html
+    items=snack_recipes called="snack recipes" template="post-recipe" %}

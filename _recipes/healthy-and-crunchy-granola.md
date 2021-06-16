@@ -3,7 +3,11 @@ long-title: healthy & crunchy granola
 diets: [v, vg, gf, ns, df]
 rating: 4.8
 description: this vegan granola is crunchy, naturally sweet, and super customizable! a mix of cinnamon, maple and nutty goodness with your choice of topping, a perfect high protien breakfast or snack.
+
 title: granola recipe
+meal:
+  - breakfast
+  - snack
 total-time: 30 minutes
 serving-size: none
 freezer-friendly: true
