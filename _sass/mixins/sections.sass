@@ -32,7 +32,7 @@
 section.basic
   display: grid
   grid-gap: $space-sm
-  padding: 0 $space-sm
+  padding: $space-sm
 
 section.playmat
   display: grid
@@ -94,8 +94,18 @@ section.offclick
 section.--shade
   background-color: rgba(0,0,0,0.5)
 
-section.row
+section.trophies
   padding: $space-sm 0
+  display: grid
+  grid-template-columns: 1fr 2fr 1fr
+  width: 100%
+  color: inherit
+  & > :first-child
+    justify-self: left
+  & > :last-child
+    justify-self: right
+
+section.row
   display: flex
   flex-wrap: wrap
   place-content: center
@@ -120,6 +130,7 @@ section.note
 section.plate
   display: grid
   grid-template-columns: 2fr 1fr
+  grid-gap: $space-md
 
 section.small
   height: 33vh

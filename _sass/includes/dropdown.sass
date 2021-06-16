@@ -1,12 +1,17 @@
 section.dropdown
   position: relative
+  display: flex
+  gap: $space-sm
 
-.dropdown-nav > main
-  display: grid
+.dropdown-nav 
   position: absolute
-  background-color: $secondary
-  box-shadow: $shadow-24dp
-  z-index: 24
+  bottom: -$space-xs
+  > main
+    display: grid
+    position: absolute
+    background-color: $secondary
+    box-shadow: $shadow-24dp
+    z-index: 24
 
 .hidden
   display: none
