@@ -17,6 +17,11 @@ instructions:
   - step two
 notes: any extra notes here
 
+meal:
+  - breakfast
+  - and lunch
+  - or dinner
+
 pin-amount: 1
 featured: false
 published: false

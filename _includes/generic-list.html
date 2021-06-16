@@ -1,0 +1,16 @@
+{% assign items = include.items %}
+{% assign called = include.called %}
+{% assign template = include.template %}
+
+<div class="container theme--secondary">
+  <section class="trophies">
+    <p>{{ items | size }} items</p>
+    <h3>{{ include.called }}</h3>
+    <aside></aside>
+  </section>
+  <section class="playmat">
+    {% for item in items %}
+      {% include {{ template }}.html post=item %}
+    {% endfor %}
+  </section>
+</div>
