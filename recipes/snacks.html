@@ -16,6 +16,6 @@ permalink: /recipes/snacks/
   </section>
 </div>
 
-{% assign snack_recipes = site.recipes | where: "meal", "snacks" %}
+{% assign snack_recipes = site.recipes | where: "meal", "snack" %}
 {% include generic-list.html
     items=snack_recipes called="snack recipes" template="post-recipe" %}
