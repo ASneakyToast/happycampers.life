@@ -1,15 +1,16 @@
 ---
 layout: default
-title: journal enteries
+title: journal-enteries
 
 permalink: /blogs/journals/
 ---
 
 <div class="container theme--primary">
   <h1>journals</h1>
-  <p>breakfast description. something abbout breakfast bbeing the most important part of the day and our main things to eat are our delicious <a href="{% link _recipes/healthy-and-crunchy-granola.md %}">granola.</a></p>
+  <p>here you'll find writings of our stories and personal experiences, everything from lessons learned to life changing moments and all the little things in-between.</p>
 </div>
 
+<!-- TODO: make journal template photo with name under or wait until she finds an example -->
 {% assign journal_enteries = site.journals %}
 {% include generic-list.html
     items=journal_enteries called="journal enteries" template="post-card" %}
