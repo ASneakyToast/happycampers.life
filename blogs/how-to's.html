@@ -1,0 +1,13 @@
+---
+layout: default
+title: how-to's
+---
+
+<div class="container theme--primary">
+  <h2>how to's</h2>
+  <p>these are things that we've learned which helped us both in our personal journies as well as in life on the road, we found them so valuable that we wanted to teach them to you</p>
+</div>
+
+{% assign posts = site.posts | where: "category", "how-to" %}
+{% include generic-list.html
+    items=posts called="how-to's" template="post-pin" %}
