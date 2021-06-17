@@ -1,0 +1,15 @@
+---
+layout: default
+title: sweets
+permalink: /recipes/sweets/
+---
+
+<div class="container theme--primary">
+  <h1>sweets</h1>
+  <p style='text-align: justify'>for all the sweet toothed people out there just like us, these naturally sweetend treats will have your mouth watering while also leaving you with the question "how these are vegan?" each sweet recipe is made with superfoods, that not only taste incredible, but make your body feel good too.</p>
+  </section>
+</div>
+
+{% assign recipes = site.recipes | where: 'meal', 'sweets' %}
+{% include generic-list.html
+    items=recipes called="sweets" template="post-recipe" %}
