@@ -1,12 +1,9 @@
 ---
 layout: default
-title: eco
+title: eco living
+description: these are some of the ways we practice living in harmony with nature. this planet is our home and provides us with everything we need and when we take care of it, it takes care of us. sustainable living is how we practice this in our day to day lives
 ---
-
-<div class="container theme--primary">
-  <h2>eco living</h2>
-  <p>these are some of the ways we practice living in harmony with nature. this planet is our home and provides us with everything we need and when we take care of it, it takes care of us. sustainable living is how we practice this in our day to day lives</p>
-</div>
+{% include page-info.html %}
 
 {% assign posts = site.posts | where: "category", "eco" %}
 {% include generic-list.html

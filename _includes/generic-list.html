@@ -3,11 +3,13 @@
 {% assign template = include.template %}
 
 <div class="container theme--secondary">
-  <section class="trophies">
-    <p>{{ items | size }} items</p>
-    <h3>{{ include.called }}</h3>
-    <aside></aside>
-  </section>
+  {% comment %}
+    <section class="trophies">
+      <p>{{ items | size }} items</p>
+      <h3>{{ include.called }}</h3>
+      <aside></aside>
+    </section>
+  {% endcomment %}
   <section class="playmat">
     {% for item in items %}
       {% include {{ template }}.html post=item %}
