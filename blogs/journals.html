@@ -1,0 +1,15 @@
+---
+layout: default
+title: journal enteries
+
+permalink: /blogs/journals/
+---
+
+<div class="container theme--primary">
+  <h1>journals</h1>
+  <p>breakfast description. something abbout breakfast bbeing the most important part of the day and our main things to eat are our delicious <a href="{% link _recipes/healthy-and-crunchy-granola.md %}">granola.</a></p>
+</div>
+
+{% assign journal_enteries = site.journals %}
+{% include generic-list.html
+    items=journal_enteries called="journal enteries" template="post-card" %}

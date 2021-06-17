@@ -1,6 +1,11 @@
 ---
 title: "how our dream turned into our reality"
 author: marisa
+
+pin: false
+cover: true
+featured: false
+published: true
 ---
 It was new years, January 2020  when Joel and I met in beautiful, snowy Lake Tahoe at Snow Globe music festival. It really was love at first site<3 
 

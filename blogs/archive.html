@@ -1,0 +1,16 @@
+---
+layout: default
+title: blogs
+
+permalink: /blogs/
+---
+
+<div class="container theme--primary">
+  <h1>all posts</h1>
+  <p>here is all our of blogs. I need this text too, maybe she can do it on the spot.</p>
+</div>
+
+<!-- TODO: find some way to aggregate all different blog post directories (journal, how-to, travel, etc.) -->
+{% assign blogs = site.posts %}
+{% include generic-list.html
+    items=blogs called="blogs" template="post-pin" %}
