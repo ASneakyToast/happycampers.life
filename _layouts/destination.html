@@ -1,12 +1,25 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" href="/assets/css/destination.css">
 
-<div class="meta">
-  <h2>{{ page.title }}</h2>
-  <h3>{{ page.destination }}</h2>
-</div>
-<div>
+<div class="container theme--primary">
+  <section>
+    <h2>{{ page.title }}</h2>
+    <h3>{{ page.state }}</h2>
+  </section>
+
   {{ content }}
+
+  <section id="memories">
+    <h2>Memories</h2>
+
+    <section class="playmat">
+      {% assign destination_memories = site.memories | where: 'destination', page.title %}
+      {% for memory in destination_memories %}
+        <article>
+          <img src="/assets/memories/{{ memory.filename }}"></img>
+        </article>
+      {% endfor %}
+    </section>
+  </section>
 </div>

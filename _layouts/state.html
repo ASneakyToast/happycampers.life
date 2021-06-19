@@ -1,14 +1,46 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
+{% assign state_posts = site.destinations | where: 'state', page.title %}
+{% assign state_memories = site.memories | where: 'state', page.title %}
 
-{{ content }}
+<section>
+  <img class="full" src="{% asset_path cover.jpg {{ page.id }} %}"></img>
+</section>
 
-<h2>Posts</h2>
-<ul>
-  {% assign filtered_posts = site.destinations | where: 'destination', page.destination %}
-  {% for post in filtered_posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+<div id="post" class="container theme--secondary">
+  <div class="container-small">
+    <h1>{{ page.title }}</h1>
+  </div>
+
+  {{ content }}
+
+  <div id="memories" class="container-small">
+    <h2>posts</h2>
+    {% if state_posts != empty %}
+      <ul>
+        {% for post in state_posts %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>more posts coming soon!</p>
+    {% endif %}
+  </div>
+
+  <div id="memories" class="container-small">
+    <h2>memories</h2>
+
+    {% if state_memories != empty %}
+      <section class="mason">
+        {% for memory in state_memories %}
+          <article class="card">
+            <img class="" src="/assets/memories/{{ memory.filename }}" data-quickview ></img>
+          </article>
+        {% endfor %}
+      </section>
+    {% else %}
+      <p>no memories made here yet!</p>
+    {% endif %}
+  </div>
+</div>

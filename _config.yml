@@ -3,6 +3,8 @@ collections:
     output: true
   destinations:
     output: true
+  states:
+    output: true
   memories:
     output: true
   journals:
@@ -20,6 +22,11 @@ defaults:
       type: "destinations"
     values:
       layout: "destination"
+  - scope:
+      path: ""
+      type: "states"
+    values:
+      layout: "state"
   - scope:
       path: ""
       type: "authors"

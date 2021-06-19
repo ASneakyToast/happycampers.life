@@ -2,28 +2,49 @@
 layout: default
 title: map
 ---
-<link rel="stylesheet" href="assets/css/map.css">
+<link rel="stylesheet" href="/assets/css/map.css">
 
 
-<div>
+<div class="container theme--primary">
   <h1>all destinations</h1>
-  <div class="map">
-    <ul class="map__meta">
-      <li class="map__meta_item"><h3>2 states</h3></li>
-      <li class="map__meta_item"><h3>24 destinations</h3></li>
-    </ul>
-    <hr>
-    <img class="map__drawing" src="assets/media/US_map.svg" alt="map of the us"></img>
-  </div>
 
-  <ul class="destinations">
-    <!-- TODO: change this so it's actually filtering by unique destination:values and not all posts -->
-    {% for state in site.destinations %}
-      <a class="destination-item" href="{{ state.url }}"><li>
-        <h4 class="destination-item__title">{{ state.title }}</h4>
-        <img class="destination-item__image" src="assets/media/destinations/{{ state.title }}.jpg"></img>
-        <p>see all {{ state.title }} posts</p>
-      </li></a>
-    {% endfor %}
-  </ul>
+  <section id="map">
+    <section class="row">
+      <h3>12 states</h3>
+      <h3>{{ site.destinations | size }} destinations</h3>
+    </section>
+
+    <hr></hr>
+
+    {% include US_map.html %}
+  </section>
+</div>
+
+<div id="states" class="container theme--secondary">
+
+  <section class="playmat">
+  {% for state in site.states %}
+    <section class="">
+
+      <article class="card"><a href="{{ state.url }}">
+        <h4>{{ state.title }}</h4>
+          <img class="cover" src="{% asset_path cover.jpg {{ state.id }} %}"></img>
+        </a>
+      </article>
+
+      {% assign state-destinations = site.destinations | where: "state", state.title %}
+      {% if state-destinations != empty %}
+        <section class="left">
+          {% for destination in state-destinations limit:3 %}
+            <article><a href="{{ destination.url }}">
+              <h5>- {{ destination.title }}</h5>
+            </a>
+            </article>
+          {% endfor %}
+        </section>
+      {% endif %}
+
+    </section>
+  {% endfor %}
+  </section>
 </div>

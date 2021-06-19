@@ -1,0 +1,34 @@
+---
+layout: default
+title: map
+permalink: /map
+---
+<link rel="stylesheet" href="/assets/css/map.css">
+
+
+<div class="container theme--primary">
+  <h1>all destinations</h1>
+
+  <section id="map">
+    <section class="row">
+      <h3>2 states</h3>
+      <h3>24 destinations</h3>
+    </section>
+
+    <hr></hr>
+
+    <img class="map" src="/assets/media/US_map.svg" alt="map of the us"></img>
+  </section>
+
+  <!-- is this all destinations or just states? [marisa]-->
+  <section class="destinations">
+    <!-- TODO: change this so it's actually filtering by unique destination:values and not all posts -->
+    {% for state in site.destinations %}
+      <a href="{{ state.url }}">
+        <h4 class="destination-item__title">{{ state.title }}</h4>
+        <img class="destination-item__image" src="/assets/media/destinations/{{ state.title }}.jpg"></img>
+        <p>see all {{ state.title }} posts</p>
+      </a>
+    {% endfor %}
+  </section>
+</div>
