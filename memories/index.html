@@ -6,18 +6,18 @@ layout: default
 <div class="container theme--primary">
   <h1>Our Memories</h1>
 
-  <section class="playmat">
+  <section class="mason-3">
     {% for memory in site.memories %}
-      <article>
-        <section class="small quickview">
-          {% if memory.filename contains ".jpg" %}
-            <img class="full" src="/assets/memories/{{ memory.filename }}"></img>
-          {% elsif memory.filename contains ".mp4" %}
+      <article class="card">
+        {% if memory.filename contains ".mp4" %}
+          <!-- 
             <video controls>
               <source type="video/mp4" src="/assets/memories/{{ memory.filename }}"></source>
             </video>
-          {% endif %}
-        </section>
+          -->
+        {% else %} <!-- if .jpeg .jpg .png -->
+          <img data-quickview class="full" src="/assets/memories/{{ memory.filename }}"></img>
+        {% endif %}
         <p>{{ memory.title }}</p>
       </article>
     {% endfor %}

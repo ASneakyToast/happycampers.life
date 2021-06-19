@@ -1,6 +1,7 @@
 let quickview_images = [];
 document.querySelectorAll("#post img").forEach( ele => {quickview_images.push(ele)});
 document.querySelectorAll("section.quickview > img").forEach( ele => {quickview_images.push(ele)});
+document.querySelectorAll("[data-quickview]").forEach( ele => {quickview_images.push(ele)});
 let quickview_videos = document.querySelectorAll("section.quickview > video");
 
 let quickview_offclick = document.querySelector("#quickview > aside");
