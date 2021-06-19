@@ -11,7 +11,7 @@ title: map
   <section id="map">
     <section class="row">
       <h3>12 states</h3>
-      <h3>24 destinations</h3><!-- find out how I cna do site.destinations.amount or .length -->
+      <h3>{{ site.destinations | size }} destinations</h3>
     </section>
 
     <hr></hr>
@@ -20,7 +20,7 @@ title: map
   </section>
 </div>
 
-<div id="states" class="container theme--primary">
+<div id="states" class="container theme--secondary">
 
   <section class="playmat">
   {% for state in site.states %}

@@ -1,5 +1,6 @@
 ---
 title: state-name
+flavor-text: none
 
 featured: false
 published: false

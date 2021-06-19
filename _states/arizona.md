@@ -1,5 +1,6 @@
 ---
 title: arizona
+flavor-text: none
 
 featured: false
 published: true
