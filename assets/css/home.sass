@@ -5,18 +5,29 @@
 .content
   margin: 0
 
+@media screen and (max-width: $screen-mobile+1)
+  .landing-text
+    position: absolute
+    top: 16px
+    margin: 16px
+
 .landing
-  height: 592px
+  height: 66vh
   display: flex
   justify-content: center
   align-items: center
   background-color: darkgreen
-  background-image: url("/assets/images/landing-drone.jpg")
+  background-image: url("/assets/images/homepage-landing.jpg")
   background-repeat: no-repeat
   background-size: cover
+  background-position: bottom
+  background-position-x: left
   position: relative
   
   &-text
+    background-color: rgba(0,0,0,0.33)
+    border-radius: 24px
+    padding: $space-sm $space-md
     color: white
     text-align: center
     & p 
